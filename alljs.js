@@ -39,7 +39,7 @@ function displayTransactions() {
 
     history.innerHTML = "";
 
-    transactions.forEach(function(transaction) {
+    [...transactions].reverse().forEach(function(transaction) {
         const row = document.createElement("tr");
 
         const values = [

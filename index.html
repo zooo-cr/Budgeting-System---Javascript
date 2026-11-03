@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>QRipot</h1>
+    <br>
+    <a href="transaction_history.html">View Transaction History</a>
+    <br><br>
     <p>Welcome Back! your current balance is: <span id="balance"></span> / <span id="limit"></span></p>
 
     <!--this is for the user to input whether they received an income or an expense. -->
@@ -17,7 +20,11 @@
 <form id="addincomeForm">
 
      <label>Category:</label>
-    <input type="text" id="category" required>
+    <select id="category" required>
+        <option value="Allowance">Allowance</option>
+        <option value="Pocket Money">Pocket Money</option>
+        <option value="Salary">Salary</option>
+    </select>
 
     <br><br>
 
@@ -37,12 +44,19 @@
     <br><br>
 
     <button type="submit">Add Income</button>
+    <br>
 </form>
 
 <form id="addexpenseForm">
 
      <label>Category:</label>
-    <input type="text" id="category" required>
+    <select id="category" required>
+        <option value="Food and Drinks">Food and Drinks</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Personal Needs">Personal Needs</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Savings">Savings</option>
+    </select>
 
     <br><br>
 
@@ -64,7 +78,7 @@
     <button type="submit">Add Expense</button>
 </form>
 
-<a href="transaction_history.html">View Transaction History</a>
+
 
 </body>
 <script src="alljs.js" defer></script>
